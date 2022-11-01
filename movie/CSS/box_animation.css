@@ -1,0 +1,215 @@
+.box {
+	animation-name: static_state;
+	animation-duration: 400ms;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+
+@keyframes static_state {
+	from {
+		top: -6px;
+		transform: scale(1.03);
+	}
+
+	to {
+		left: 0px;
+		top: 0px;
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.box:hover {
+	animation-name: mouse_on;
+	animation-duration: 200ms;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+}
+
+@keyframes mouse_on {
+	from {}
+
+	to {
+		top: -6px;
+		transform: scale(1.03);
+	}
+}
+
+.box:active {
+	animation-name: click;
+	animation-duration: 400ms;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+}
+
+@keyframes click {
+	from {
+		top: -3px;
+		transform: scale(1.01);
+	}
+
+	to {
+		top: 0px;
+		transform: scale(0.85);
+	}
+}
+
+.load {
+	animation-name: load;
+	animation-duration: 500ms;
+	animation-timing-function: cubic-bezier(0.1,0.1,0,1.5);
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+@keyframes load {
+	from {
+		transform: scale(0.40);
+		opacity: 0;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.box_title {
+	position: relative;
+	top: 0px;
+	opacity: 0;
+	transform: scale(0.2);
+	animation-name: text_load;
+	animation-duration: 500ms;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+@keyframes text_load {
+	from {
+		top: 0px;
+		opacity: 0;
+		transform: scale(0.4);
+	}
+
+	to {
+		top: 0px;
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.hr_size {
+	width: 300px;
+	animation-name: hr_size;
+	animation-duration: 800ms;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+@keyframes hr_size {
+	from {
+		width: 0px;
+	}
+
+	to {
+		width: 300px;
+	}
+}
+
+.a_info {
+	color: var(--host-color);
+	text-decoration: none;
+}
+
+.a_info:hover {
+	text-decoration: underline;
+	animation-name: info;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+
+@keyframes info{
+	0% {
+		color: var(--deeper-color);
+	}
+	50% {
+		color: var(--host-color);
+	}
+	100% {
+		color: var(--deeper-color);
+	}
+}
+
+#title1 {
+	letter-spacing: 100px;
+	opacity: 0;
+	animation-name: title1;
+	transform: scale(0);
+	animation-duration: 800ms;
+	animation-timing-function: ease-out;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+@keyframes title1{
+	from{
+		letter-spacing: 50px;
+		opacity: 0;
+		transform: scale(0);
+	}
+	to{
+		letter-spacing: 0px;
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.title2 {
+	line-height: 200%;
+	opacity: 0;
+	position: relative;
+	animation-name: title2;
+	animation-duration: 500ms;
+	animation-timing-function: ease-out;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+	animation-delay: 300ms;
+}
+
+@keyframes title2{
+	from{
+		top: -20px;
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+		top: 0px;
+	}
+}
+
+#emjoy {
+	letter-spacing: 0px;
+	animation-name: emjoy;
+	animation-duration: 1000ms;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+
+@keyframes emjoy{
+	from{
+		letter-spacing: 0px;
+	}
+	to{
+		letter-spacing: 1px;
+	}
+}

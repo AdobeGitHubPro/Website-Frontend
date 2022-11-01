@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>唐人街探案3 - lhlnb.top q(≧▽≦q)</title>
+		<link rel="shortcut icon" type="images/x-icon" href="https://www.lhlnb.top/icon/favicon_player.ico" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui-player.min.css" />
+		<script type="text/javascript">
+				if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+					if(window.location.href.indexOf("?mobile")<0){
+						try{
+							if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+				                                //触屏手机版地址
+								window.location.href="https://m.lhlnb.top/movie/tt3/";
+							}else if(/iPad/i.test(navigator.userAgent)){
+				                                //pad版地址
+								window.location.href="https://m.lhlnb.top/movie/tt3/";
+							}else{
+				                                //普通手机版地址
+								window.location.href="https://m.lhlnb.top/movie/tt3/";
+							}
+						}catch(e){}
+					}
+				}
+		</script>
+	</head>
+	<body>
+		<div id="title" align="center">
+			<span>唐人街探案3</span>
+		</div>
+		<div id="bar_all">
+			<div id="bar_text" align="center">
+				<span>loading...</span>
+				<span>ヾ(≧▽≦*)o</span>
+			</div>
+			<div id="bar_border"></div>
+			<div id="bar"></div>
+		</div>
+		<div id="player">
+			<div id="player1"></div>
+			<!-- <div id="player2"></div> -->
+		</div>
+		<div align="center">
+			<p id="info">
+				<a class="a_info" href="https://www.lhlnb.top/404/" target="_blank">关于我</a>
+				<a class="a_info" href="https://www.lhlnb.top/" target="_blank">首页传送门</a>
+				<a class="a_info" href="http://beian.miit.gov.cn/" target="_blank">蜀ICP备2022004197号</a>
+				<br>
+				Copyright except for linked resources © 2021-2022
+				<a class="a_info" href="https://www.lhlnb.top/" target="_blank">lhlnb.top</a>
+				All Rights Reserved.
+				<br>
+				Powered By
+				<a class="a_info" target="_blank" href="https://space.bilibili.com/335320968/">WIFI连接超时</a>
+				<br><br>
+			</p>
+		</div>
+		<script src="js/mui-player-desktop-plugin.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui-player.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			let thumbnails = {
+				preview: [
+					'image/videoThumbnails/output1.jpg',
+					'image/videoThumbnails/output2.jpg',
+					'image/videoThumbnails/output3.jpg'
+				],
+				tile: [10, 10],
+				scale: [160, 90],
+			}
+
+			var mp = new MuiPlayer({
+				container: '#player1',
+				title: '唐人街探案3',
+				src:'https://pan.lhlnb.top/api/v3/file/source/1444/%E5%94%90%E4%BA%BA%E8%A1%97%E6%8E%A2%E6%A1%883.mp4?sign=p-bNhNpoQxJTujWYg_C7N8r_eCivMXzb5PFIls9Qaxg%3D%3A0',
+				autoplay: 'false',
+				lang: 'zh-cn',
+				themeColor: '#fb7299',
+				height: '500px',
+				volume: '0.8',
+				poster: 'image/videoCover.jpg',
+				plugins: [
+					new MuiPlayerDesktopPlugin({
+						customSetting: [{
+							functions: '画质',
+							model: 'select',
+							show: true,
+							zIndex: 2,
+							childConfig: [
+								// {functions:'4K'},
+								// {functions:'2K'},
+								{
+									functions: '1080P',
+									selected: true
+								},
+								// {functions:'360P'},
+							],
+							onToggle: function(data, selected, back) {
+								// Action
+							}
+						}, ],
+						// thumbnails,
+						contextmenu: [{
+								name: 'muiplayer',
+								context: 'MuiPlayer',
+								show: false,
+							},
+							{
+								name: 'copyPlayUrl',
+								context: '没写function的',
+								zIndex: 3,
+								show: true,
+								click: function(close) {
+									callback(close)
+								}
+							},
+							{
+								name: 'copyPlayUrl',
+								context: '右键菜单',
+								zIndex: 2,
+								show: true,
+								click: function(close) {
+									callback(close)
+								}
+							},
+							{
+								name: 'copyPlayUrl',
+								context: '哈哈哈哈哈',
+								zIndex: 1,
+								show: true,
+								click: function(close) {
+									callback(close)
+								}
+							},
+						],
+					})
+				],
+				// subtitle: {
+				// 	tracks: [{
+				// 			kind: 'subtitles',
+				// 			src: 'video/test-zh.vtt',
+				// 			label: '中文简体',
+				// 			srclang: 'zh-cn',
+				// 		},
+				// 		{
+				// 			kind: 'subtitles',
+				// 			src: 'video/test-en.vtt',
+				// 			label: '英语(谷歌翻译)',
+				// 			srclang: 'en',
+				// 			default: true,
+				// 		},
+				// 	],
+				// 	styles: {
+				// 		color: '#FFFFFF',
+				// 		background: 'rgba(0, 0, 0, 0.5)',
+				// 		textShadow: '0px 0px 1px #000000',
+				// 	},
+				// },
+			})
+		</script>
+	</body>
+
+</html>

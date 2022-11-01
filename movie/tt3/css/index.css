@@ -1,0 +1,255 @@
+:root {
+	/* 加载时间 */
+	--load-time: 3.5s;
+	
+	/* 网页背景色 */
+	--background-color: #ffe9ef;
+	/* #fa9eb8 */
+	/* 网页主题色 */
+	--host-color: #fb7299;
+	/* 主题加深色 */
+	--deep-color: #ca5c7d;
+	--deeper-color: #c01f4d;
+
+/* 	--background-color: #aacef5;
+	--host-color: #51a5ff;
+	--deep-color: #216cbe;
+	--deeper-color: #03356b; */
+
+/* 	--background-color: #7cdc96;
+	--host-color: #2ec255;
+	--deep-color: #179237;
+	--deeper-color: #08501b; */
+
+/* 	--background-color: #f8df70;
+	--host-color: #fcc307;
+	--deep-color: #b08700;
+	--deeper-color: #5f4902; */
+	
+}
+
+* {
+	-webkit-user-select: none;
+}
+
+body {
+	background-color: var(--background-color);
+	/* background-image: linear-gradient(120deg,#ffcde1,#ffe6f0,#ffeef4,#ffcde1); */
+}
+
+#title {
+	margin: auto;
+	position: relative;
+	top: 10px;
+	font-size: 40px;
+	font-weight: 800;
+	color: var(--host-color);
+	text-shadow: 
+		0px 1.5px 0px #FFFFFF,
+		1.5px 1.5px 0px #FFFFFF,
+		1.5px 0px 0px #FFFFFF,
+		1.5px -1.5px 0px #FFFFFF,
+		0px -1.5px 0px #FFFFFF,
+		-1.5px -1.5px 0px #FFFFFF,
+		-1.5px 0px 0px #FFFFFF,
+		-1.5px 1.5px 0px #FFFFFF,
+		2px 2px 5px #616363;
+}
+
+#player {
+	margin: 0px auto;
+	width: 70%;
+	border: 4px solid #FFFFFF;
+	position: relative;
+	top: -20px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+}
+
+#player1 {
+	margin: 3px;
+}
+
+#info {
+	color: var(--host-color);
+	font-size: 100%;
+	font-weight: 400;
+	opacity: 0;
+	animation-name: info_load;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+	animation-delay: var(--load-time);
+}
+
+@keyframes info_load{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 0.8;
+	}
+}
+
+.a_info {
+	color: var(--host-color);
+	font-size: 100%;
+	font-weight: 400;
+}
+
+.a_info {
+	color: var(--host-color);
+	text-decoration: none;
+}
+
+.a_info:hover {
+	text-decoration: underline;
+	animation-name: info;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+
+@keyframes info{
+	0% {
+		color: var(--deeper-color);
+	}
+	50% {
+		color: var(--host-color);
+	}
+	100% {
+		color: var(--deeper-color);
+	}
+}
+
+#player {
+	-webkit-clip-path: polygon(50% 50%,50% 50%,50% 50%,50% 50%);
+	box-shadow:
+		5px 5px 30px rgba(0,0,0,0),
+		0px 0px 15px rgba(251, 114, 153, 0);
+	animation-name: load;
+	animation-duration: 4s;
+	animation-timing-function: cubic-bezier(0.7,0,0.1,1);
+	animation-direction: alternate;
+	animation-fill-mode: both;
+	animation-delay: var(--load-time);
+}
+
+@keyframes load{
+	0%{
+		-webkit-clip-path: polygon(50% 50%,50% 50%,50% 50%,50% 50%);
+		
+	}
+	50%{
+		-webkit-clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%);
+		box-shadow:
+			5px 5px 30px rgba(0,0,0,0),
+			0px 0px 15px rgba(251, 114, 153, 0);
+	}
+	100%{
+		-webkit-clip-path: polygon(-200% -200%,200% -200%,200% 200%,-200% 200%);
+		box-shadow:
+			5px 5px 30px rgba(0,0,0,0.1),
+			0px 0px 15px rgba(251, 114, 153, 0.2);
+	}
+}
+
+#bar_text {
+	color: var(--host-color);
+	font-size: 140%;
+	font-weight: 600;
+	position: relative;
+	top: 190px;
+	text-shadow: 
+		0px -1px 0px #FFFFFF,
+		1px -1px 0px #FFFFFF,
+		1px 0px 0px #FFFFFF,
+		1px 1px 0px #FFFFFF,
+		0px 1px 0px #FFFFFF,
+		-1px 1px 0px #FFFFFF,
+		-1px 0px 0px #FFFFFF,
+		-1px -1px 0px #FFFFFF,
+		1px 1px 5px rgba(0,0,0,0.3);
+	letter-spacing: 0px;
+	animation-name: text_space;
+	animation-duration: 800ms;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+}
+
+@keyframes text_space{
+	0%{
+		letter-spacing: 0px;
+	}
+	100%{
+		letter-spacing: 1px;
+	}
+}
+
+#bar {
+	display: block;
+	position: relative;
+	top: 187px;
+	left: -150px;
+	margin: 0px auto;
+	width: 0px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: var(--host-color);
+	animation-name: bar_load;
+	animation-duration: var(--load-time);
+	animation-timing-function: cubic-bezier(0.7,0,0.3,1);
+	animation-direction: alternate;
+	animation-fill-mode: both;
+}
+
+@keyframes bar_load{
+	from{
+		left: -150px;
+		width: 0px;
+	}
+	to{
+		left: 0px;
+		width: 300px;
+	}
+}
+
+#bar_border {
+	display: block;
+	position: relative;
+	top: 200px;
+	margin: 0px auto;
+	width: 300px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	border: 3px solid #FFFFFF;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+#bar_all {
+	position: relative;
+	top: 110px;
+	opacity: 1;
+	display: block;
+	animation-name: bar_all_exit;
+	animation-duration: 500ms;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-fill-mode: both;
+	animation-delay: var(--load-time);
+}
+
+@keyframes bar_all_exit{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+	}
+}
