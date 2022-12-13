@@ -9,7 +9,7 @@
 
 #### 技术栈
 
-HTML | CSS | JavaScript
+HTML | CSS
 
 #### 部署与运行
 
